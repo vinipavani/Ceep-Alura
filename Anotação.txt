@@ -1,0 +1,23 @@
+query.selector() -> faz uma busca percorrendo os objetos do DOM, pode ser um id, uma tag, uma classe
+
+DOM -> representação do html ém forma de objeto feito com nós que ligam as tags dentro do html
+
+data-[attributes] -> prefixo data- usado para criar atributos que podem ser usados para interação entre js e html através do DOM
+
+addEventListener(tipo de evento: string ,cb) -> a cb pode receber como paramentro dados do evento para serem utilizados
+
+tag.innerHTML = "" -> faz inserção da string na tag, como operação js a tag deve ser buscada por um query selector
+
+document.createElement -> percorre o dom e cria elementos
+
+elemento.appendChild(child) -> atribui um elemento a um pai na hierarquia html
+
+Utilizamos IIFE uma técnica para esconde o nosso js do acesso externo pelo navegador, isso porque o usuário não pode ter acesso a nossa regra de negócio
+
+para isso criamos uma arrow function ou função anonima em volta do nosso código que impede o acesso externo ao nosso código
+
+(()=> { Nosso código })()
+
+Usamos <script type="module"> para nosso html entender que nosso código principal se utiliza de modulos, códigos importados
+
+Mas isso pode gerar problema de CORS para isso é necessário testar seu código em um servidor, existe uma extensão do vscode para isso "LiveServer" do Ritwick Dey
